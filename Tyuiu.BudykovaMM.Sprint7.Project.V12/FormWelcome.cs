@@ -1,8 +1,8 @@
 namespace Tyuiu.BudykovaMM.Sprint7.Project.V12
 {
-    public partial class FormMain : Form
+    public partial class FormWelcome : Form
     {
-        public FormMain()
+        public FormWelcome()
         {
             InitializeComponent();
         }
