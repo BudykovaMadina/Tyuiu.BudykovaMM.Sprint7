@@ -117,7 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip_BMM.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="labelInfoTwice_BMM.Text" xml:space="preserve">
+    <value>Выберите файл с названием вашей фирмы-производителя. Убедитесь, что формат файла .csv и заканчивается на "InPutFile". Щелкните правой кнопкой мыши по файлу и выберите "Открыть с помощью", затем выберите Блокнот.</value>
+  </data>
+  <data name="labelInfoModelBotton_BMM.Text" xml:space="preserve">
+    <value>После внесения изменений в файл нажмите "Файл" в верхнем меню Блокнота. Выберите "Сохранить" и закройте файл. Закройте "Навигатор по ЭВМ" и снова откройте, чтобы обновить данные. Не забудьте так же обновить данные в файлах "ShopsInPutFile" и "Название_брендаPrice".</value>
+  </data>
 </root>

@@ -40,7 +40,7 @@
             labelAbout_BMM.AutoSize = true;
             labelAbout_BMM.Location = new Point(248, 61);
             labelAbout_BMM.Name = "labelAbout_BMM";
-            labelAbout_BMM.Size = new Size(387, 180);
+            labelAbout_BMM.Size = new Size(387, 200);
             labelAbout_BMM.TabIndex = 0;
             labelAbout_BMM.Text = resources.GetString("labelAbout_BMM.Text");
             // 
