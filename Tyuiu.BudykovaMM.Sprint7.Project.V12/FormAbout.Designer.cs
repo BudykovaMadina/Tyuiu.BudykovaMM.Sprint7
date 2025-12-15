@@ -38,7 +38,7 @@
             // labelAbout_BMM
             // 
             labelAbout_BMM.AutoSize = true;
-            labelAbout_BMM.Location = new Point(269, 62);
+            labelAbout_BMM.Location = new Point(248, 61);
             labelAbout_BMM.Name = "labelAbout_BMM";
             labelAbout_BMM.Size = new Size(387, 180);
             labelAbout_BMM.TabIndex = 0;
@@ -47,17 +47,17 @@
             // pictureBoxPhoto_BMM
             // 
             pictureBoxPhoto_BMM.Image = (Image)resources.GetObject("pictureBoxPhoto_BMM.Image");
-            pictureBoxPhoto_BMM.Location = new Point(12, 12);
+            pictureBoxPhoto_BMM.Location = new Point(27, 28);
             pictureBoxPhoto_BMM.Name = "pictureBoxPhoto_BMM";
-            pictureBoxPhoto_BMM.Size = new Size(229, 325);
+            pictureBoxPhoto_BMM.Size = new Size(205, 286);
             pictureBoxPhoto_BMM.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxPhoto_BMM.TabIndex = 1;
             pictureBoxPhoto_BMM.TabStop = false;
             // 
             // buttonOk_BMM
             // 
-            buttonOk_BMM.BackColor = SystemColors.ControlLightLight;
-            buttonOk_BMM.Location = new Point(562, 308);
+            buttonOk_BMM.BackColor = Color.AliceBlue;
+            buttonOk_BMM.Location = new Point(541, 285);
             buttonOk_BMM.Name = "buttonOk_BMM";
             buttonOk_BMM.Size = new Size(94, 29);
             buttonOk_BMM.TabIndex = 2;
@@ -69,10 +69,12 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(693, 352);
+            BackColor = Color.LavenderBlush;
+            ClientSize = new Size(665, 338);
             Controls.Add(buttonOk_BMM);
             Controls.Add(pictureBoxPhoto_BMM);
             Controls.Add(labelAbout_BMM);
+            ForeColor = SystemColors.ControlText;
             Name = "FormAbout";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "О программе";
