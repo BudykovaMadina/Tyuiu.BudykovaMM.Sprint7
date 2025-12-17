@@ -122,11 +122,12 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LavenderBlush;
+            BackColor = Color.Lavender;
             ClientSize = new Size(685, 332);
             Controls.Add(panel_BMM);
             Controls.Add(panelMiddle_BMM);
             Controls.Add(panelWelcomeButtons_BMM);
+            MinimumSize = new Size(703, 379);
             Name = "FormWelcome";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Добро Пожаловать.";

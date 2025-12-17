@@ -68,11 +68,7 @@ namespace Tyuiu.BudykovaMM.Sprint7.Project.V12
             guideForm.Show();
         }
 
-        private void добавитьToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            FormAddCompany addForm = new FormAddCompany();
-            addForm.ShowDialog();
-        }
+        
 
         private void buttonShowModels_BMM_Click(object sender, EventArgs e)
         {
@@ -87,62 +83,60 @@ namespace Tyuiu.BudykovaMM.Sprint7.Project.V12
                 int rows = lines.Length;
                 int columns = lines[0].Split(';').Length;
 
-                // Î÷èñòêà êîìáîáîêñà ïåðåä çàïîëíåíèåì
+                // Очистка комбобокса перед заполнением
                 comboBoxModel_BMM.Items.Clear();
 
                 for (int i = 1; i < rows; i++)
                 {
-                    // Ïîëó÷àåì ìîäåëü èç ôàéëà è äîáàâëÿåì â êîìáîáîêñ
+                    // Получаем модель из файла и добавляем в комбобокс
                     string model = ds.CollectTextFromFileInt(path, i, 0);
-                    comboBoxModel_BMM.Items.Add(model); // Äîáàâëÿåì ìîäåëü â êîìáîáîêñ
-                    textBoxShopInfo_BMM.Text += model + Environment.NewLine;
+                    comboBoxModel_BMM.Items.Add(model);
                 }
 
-                textBoxShopInfo_BMM.Text += "--------------------" + Environment.NewLine;
                 buttonDone_BMM.Enabled = true;
-                comboBoxModel_BMM.Enabled = true; // Âêëþ÷àåì êîìáîáîêñ
+                comboBoxModel_BMM.Enabled = true; // включаем комбобокс
             }
             catch
             {
-                MessageBox.Show("Ââåäåíû íåâåðíûå äàííûå", "Îøèáêà", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void LoadData()
         {
-            string name = Convert.ToString(comboBoxName_BMM.Text); // Ïîëó÷àåì èìÿ èç comboBox
-            string path = $@"C:\DataSprint7\{name}Price.csv"; // Ôîðìèðóåì ïóòü ê ôàéëó
+            string name = Convert.ToString(comboBoxName_BMM.Text); // получаем имя из comboBox
+            string path = $@"C:\DataSprint7\{name}Price.csv"; // Формируем путь к файлу
 
             try
             {
                 if (!File.Exists(path))
                 {
-                    MessageBox.Show("Ôàéë ñ äàííûìè î öåíàõ íå íàéäåí.", "Îøèáêà", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Файл с данными о ценах не найден.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                // ×òåíèå äàííûõ èç ôàéëà
+                // Чтение данных из файла
                 var models = new List<ComputerModel>();
                 string[] lines = File.ReadAllLines(path);
 
-                for (int i = 1; i < lines.Length; i++) // Íà÷èíàåì ñ 1 äëÿ ïðîïóñêà çàãîëîâêà
+                for (int i = 1; i < lines.Length; i++)
                 {
                     var columns = lines[i].Split(';');
                     if (columns.Length >= 2)
                     {
-                        string modelName = columns[0]; // Íàçâàíèå ìîäåëè
-                        double price = Convert.ToDouble(columns[1]); // Öåíà ìîäåëè
+                        string modelName = columns[0];
+                        double price = Convert.ToDouble(columns[1]);
                         models.Add(new ComputerModel { Name = modelName, Price = price });
                     }
                 }
 
-                bindingSourcePrice_BMM.DataSource = models; // Óñòàíàâëèâàåì èñòî÷íèê äàííûõ
-                dataGridViewPrice_BMM.DataSource = bindingSourcePrice_BMM; // Ñâÿçûâàåì ñ DataGridView
-                dataGridViewPrice_BMM.Columns["Name"].Width = 258; // Óñòàíîâèòå øèðèíó êîëîíêè äëÿ íàçâàíèÿ ìîäåëè
-                dataGridViewPrice_BMM.Columns["Price"].Width = 50; // Óñòàíîâèòå øèðèíó êîëîíêè äëÿ öåíû
+                bindingSourcePrice_BMM.DataSource = models;
+                dataGridViewPrice_BMM.DataSource = bindingSourcePrice_BMM;
+                dataGridViewPrice_BMM.Columns["Name"].Width = 258;
+                dataGridViewPrice_BMM.Columns["Price"].Width = 50;
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Îøèáêà ïðè çàãðóçêå äàííûõ: {ex.Message}", "Îøèáêà", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Ошибка при запуске данных: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -153,7 +147,7 @@ namespace Tyuiu.BudykovaMM.Sprint7.Project.V12
             {
                 string path = $@"C:\DataSprint7\{name}InPutFile.csv";
 
-                // Ïîëó÷àåì âûáðàííóþ ìîäåëü èç êîìáîáîêñà
+
                 string selectedModel = Convert.ToString(comboBoxModel_BMM.SelectedItem);
 
                 if (radioButtonDiagonal_BMM.Checked)
@@ -183,7 +177,7 @@ namespace Tyuiu.BudykovaMM.Sprint7.Project.V12
             }
             catch
             {
-                MessageBox.Show("Ââåäåíû íåâåðíûå äàííûå", "Îøèáêà", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public class ComputerModel
@@ -201,7 +195,7 @@ namespace Tyuiu.BudykovaMM.Sprint7.Project.V12
             }
             catch
             {
-                MessageBox.Show("Ââåäåíû íåâåðíûå äàííûå", "Îøèáêà", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -209,5 +203,6 @@ namespace Tyuiu.BudykovaMM.Sprint7.Project.V12
         {
             LoadData();
         }
+
     }
 }

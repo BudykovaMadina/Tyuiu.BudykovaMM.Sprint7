@@ -71,7 +71,10 @@
             // 
             // labelInfo_BMM
             // 
+            labelInfo_BMM.BackColor = Color.Lavender;
             labelInfo_BMM.Location = new Point(12, 9);
+            labelInfo_BMM.MaximumSize = new Size(861, 41);
+            labelInfo_BMM.MinimumSize = new Size(861, 41);
             labelInfo_BMM.Name = "labelInfo_BMM";
             labelInfo_BMM.Size = new Size(861, 41);
             labelInfo_BMM.TabIndex = 0;
@@ -159,12 +162,15 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LavenderBlush;
+            BackColor = Color.Lavender;
             ClientSize = new Size(907, 603);
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            MaximizeBox = false;
+            MaximumSize = new Size(925, 650);
+            MinimumSize = new Size(925, 650);
             Name = "FormGuideModel";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Руководство";

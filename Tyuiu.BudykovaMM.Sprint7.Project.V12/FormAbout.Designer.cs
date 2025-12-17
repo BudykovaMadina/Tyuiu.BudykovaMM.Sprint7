@@ -69,12 +69,15 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LavenderBlush;
+            BackColor = Color.Lavender;
             ClientSize = new Size(665, 338);
             Controls.Add(buttonOk_BMM);
             Controls.Add(pictureBoxPhoto_BMM);
             Controls.Add(labelAbout_BMM);
             ForeColor = SystemColors.ControlText;
+            MaximizeBox = false;
+            MaximumSize = new Size(683, 385);
+            MinimumSize = new Size(683, 385);
             Name = "FormAbout";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "О программе";

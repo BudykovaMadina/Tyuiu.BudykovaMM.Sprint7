@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             menuStrip_BMM = new MenuStrip();
             программаToolStripMenuItem = new ToolStripMenuItem();
             оПрограммеToolStripMenuItem = new ToolStripMenuItem();
@@ -56,22 +57,24 @@
             buttonShowModels_BMM = new Button();
             labelModel_BMM = new Label();
             labelfirma_BMM = new Label();
-            textBoxShopInfo_BMM = new TextBox();
-            groupBoxPrice_BMM = new GroupBox();
             dataGridViewPrice_BMM = new DataGridView();
-            Name = new DataGridViewTextBoxColumn();
-            Price = new DataGridViewTextBoxColumn();
+            textBoxShopInfo_BMM = new TextBox();
             bindingSourcePrice_BMM = new BindingSource(components);
-            groupBoxShopInfo_BMM = new GroupBox();
             groupBoxResult_BMM = new GroupBox();
             textBoxRes_BMM = new TextBox();
+            splitContainer1 = new SplitContainer();
+            label1 = new Label();
+            label2 = new Label();
+            toolTipButtons_BMM = new ToolTip(components);
             menuStrip_BMM.SuspendLayout();
             groupBoxData_BMM.SuspendLayout();
-            groupBoxPrice_BMM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPrice_BMM).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bindingSourcePrice_BMM).BeginInit();
-            groupBoxShopInfo_BMM.SuspendLayout();
             groupBoxResult_BMM.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
+            splitContainer1.Panel1.SuspendLayout();
+            splitContainer1.Panel2.SuspendLayout();
+            splitContainer1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip_BMM
@@ -159,10 +162,10 @@
             добавитьToolStripMenuItem1.Name = "добавитьToolStripMenuItem1";
             добавитьToolStripMenuItem1.Size = new Size(178, 26);
             добавитьToolStripMenuItem1.Text = "Добавить";
-            добавитьToolStripMenuItem1.Click += добавитьToolStripMenuItem1_Click;
             // 
             // groupBoxData_BMM
             // 
+            groupBoxData_BMM.BackColor = Color.Lavender;
             groupBoxData_BMM.Controls.Add(radioButtonProcessorFrequency_BMM);
             groupBoxData_BMM.Controls.Add(radioButtonRAM_BMM);
             groupBoxData_BMM.Controls.Add(radioButtonSSD_BMM);
@@ -177,9 +180,10 @@
             groupBoxData_BMM.Controls.Add(buttonShowModels_BMM);
             groupBoxData_BMM.Controls.Add(labelModel_BMM);
             groupBoxData_BMM.Controls.Add(labelfirma_BMM);
-            groupBoxData_BMM.Location = new Point(12, 31);
+            groupBoxData_BMM.Dock = DockStyle.Top;
+            groupBoxData_BMM.Location = new Point(0, 28);
             groupBoxData_BMM.Name = "groupBoxData_BMM";
-            groupBoxData_BMM.Size = new Size(883, 267);
+            groupBoxData_BMM.Size = new Size(907, 267);
             groupBoxData_BMM.TabIndex = 1;
             groupBoxData_BMM.TabStop = false;
             groupBoxData_BMM.Text = "Ввод данных";
@@ -252,61 +256,76 @@
             // 
             // buttonLoadData_BMM
             // 
+            buttonLoadData_BMM.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonLoadData_BMM.BackColor = Color.AliceBlue;
-            buttonLoadData_BMM.Location = new Point(786, 209);
+            buttonLoadData_BMM.Image = (Image)resources.GetObject("buttonLoadData_BMM.Image");
+            buttonLoadData_BMM.Location = new Point(810, 209);
             buttonLoadData_BMM.Name = "buttonLoadData_BMM";
-            buttonLoadData_BMM.Size = new Size(57, 48);
+            buttonLoadData_BMM.Size = new Size(57, 51);
             buttonLoadData_BMM.TabIndex = 13;
-            buttonLoadData_BMM.Text = "Prise";
+            toolTipButtons_BMM.SetToolTip(buttonLoadData_BMM, "Информация о цене моделей выбранной фирмы.");
             buttonLoadData_BMM.UseVisualStyleBackColor = false;
+            buttonLoadData_BMM.Click += buttonLoadData_BMM_Click;
             // 
             // buttonDone_BMM
             // 
+            buttonDone_BMM.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonDone_BMM.BackColor = Color.AliceBlue;
             buttonDone_BMM.Enabled = false;
-            buttonDone_BMM.Location = new Point(786, 98);
+            buttonDone_BMM.Image = (Image)resources.GetObject("buttonDone_BMM.Image");
+            buttonDone_BMM.Location = new Point(810, 98);
             buttonDone_BMM.Name = "buttonDone_BMM";
-            buttonDone_BMM.Size = new Size(57, 48);
+            buttonDone_BMM.Size = new Size(57, 51);
             buttonDone_BMM.TabIndex = 6;
-            buttonDone_BMM.Text = "done";
+            toolTipButtons_BMM.SetToolTip(buttonDone_BMM, "Подтвердите выбор модели и нужной характеристики.");
             buttonDone_BMM.UseVisualStyleBackColor = false;
             buttonDone_BMM.Click += buttonDone_BMM_Click;
             // 
             // buttonShowShopInfo_BMM
             // 
+            buttonShowShopInfo_BMM.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonShowShopInfo_BMM.BackColor = Color.AliceBlue;
-            buttonShowShopInfo_BMM.Location = new Point(786, 152);
+            buttonShowShopInfo_BMM.Image = (Image)resources.GetObject("buttonShowShopInfo_BMM.Image");
+            buttonShowShopInfo_BMM.Location = new Point(810, 152);
             buttonShowShopInfo_BMM.Name = "buttonShowShopInfo_BMM";
-            buttonShowShopInfo_BMM.Size = new Size(57, 48);
+            buttonShowShopInfo_BMM.Size = new Size(57, 51);
             buttonShowShopInfo_BMM.TabIndex = 5;
-            buttonShowShopInfo_BMM.Text = "info shop";
+            toolTipButtons_BMM.SetToolTip(buttonShowShopInfo_BMM, "Информация о фирме-производителе.");
             buttonShowShopInfo_BMM.UseVisualStyleBackColor = false;
             buttonShowShopInfo_BMM.Click += buttonShowShopInfo_BMM_Click;
             // 
             // comboBoxName_BMM
             // 
+            comboBoxName_BMM.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboBoxName_BMM.AutoCompleteSource = AutoCompleteSource.ListItems;
             comboBoxName_BMM.FormattingEnabled = true;
-            comboBoxName_BMM.Location = new Point(12, 109);
+            comboBoxName_BMM.Items.AddRange(new object[] { "Acer", "Asus", "Dell", "HP", "HUAWEI", "Lenovo", "LG", "Microsoft", "Samsung", "Sony", "Toshiba", "Xiaomi" });
+            comboBoxName_BMM.Location = new Point(12, 51);
             comboBoxName_BMM.Name = "comboBoxName_BMM";
             comboBoxName_BMM.Size = new Size(736, 28);
             comboBoxName_BMM.TabIndex = 4;
             // 
             // comboBoxModel_BMM
             // 
+            comboBoxModel_BMM.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboBoxModel_BMM.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBoxModel_BMM.Enabled = false;
             comboBoxModel_BMM.FormattingEnabled = true;
-            comboBoxModel_BMM.Location = new Point(12, 54);
+            comboBoxModel_BMM.Location = new Point(12, 109);
             comboBoxModel_BMM.Name = "comboBoxModel_BMM";
             comboBoxModel_BMM.Size = new Size(736, 28);
             comboBoxModel_BMM.TabIndex = 3;
             // 
             // buttonShowModels_BMM
             // 
+            buttonShowModels_BMM.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             buttonShowModels_BMM.BackColor = Color.AliceBlue;
-            buttonShowModels_BMM.Location = new Point(786, 43);
+            buttonShowModels_BMM.Image = (Image)resources.GetObject("buttonShowModels_BMM.Image");
+            buttonShowModels_BMM.Location = new Point(810, 40);
             buttonShowModels_BMM.Name = "buttonShowModels_BMM";
-            buttonShowModels_BMM.Size = new Size(57, 48);
+            buttonShowModels_BMM.Size = new Size(57, 51);
             buttonShowModels_BMM.TabIndex = 2;
-            buttonShowModels_BMM.Text = "show ";
+            toolTipButtons_BMM.SetToolTip(buttonShowModels_BMM, "Подтвердите выбор фирмы-производителя");
             buttonShowModels_BMM.UseVisualStyleBackColor = false;
             buttonShowModels_BMM.Click += buttonShowModels_BMM_Click;
             // 
@@ -328,109 +347,121 @@
             labelfirma_BMM.TabIndex = 0;
             labelfirma_BMM.Text = "Выберите фирму-производитель";
             // 
-            // textBoxShopInfo_BMM
-            // 
-            textBoxShopInfo_BMM.BackColor = Color.AliceBlue;
-            textBoxShopInfo_BMM.Location = new Point(6, 25);
-            textBoxShopInfo_BMM.Multiline = true;
-            textBoxShopInfo_BMM.Name = "textBoxShopInfo_BMM";
-            textBoxShopInfo_BMM.ReadOnly = true;
-            textBoxShopInfo_BMM.Size = new Size(532, 188);
-            textBoxShopInfo_BMM.TabIndex = 2;
-            // 
-            // groupBoxPrice_BMM
-            // 
-            groupBoxPrice_BMM.Controls.Add(dataGridViewPrice_BMM);
-            groupBoxPrice_BMM.Location = new Point(15, 349);
-            groupBoxPrice_BMM.Name = "groupBoxPrice_BMM";
-            groupBoxPrice_BMM.Size = new Size(330, 242);
-            groupBoxPrice_BMM.TabIndex = 3;
-            groupBoxPrice_BMM.TabStop = false;
-            groupBoxPrice_BMM.Text = "Сведения о цене ($)";
-            // 
             // dataGridViewPrice_BMM
             // 
             dataGridViewPrice_BMM.BackgroundColor = Color.AliceBlue;
             dataGridViewPrice_BMM.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewPrice_BMM.Columns.AddRange(new DataGridViewColumn[] { Name, Price });
-            dataGridViewPrice_BMM.Location = new Point(12, 35);
+            dataGridViewPrice_BMM.Location = new Point(26, 23);
             dataGridViewPrice_BMM.Name = "dataGridViewPrice_BMM";
             dataGridViewPrice_BMM.ReadOnly = true;
             dataGridViewPrice_BMM.RowHeadersVisible = false;
             dataGridViewPrice_BMM.RowHeadersWidth = 51;
-            dataGridViewPrice_BMM.ScrollBars = ScrollBars.Vertical;
-            dataGridViewPrice_BMM.Size = new Size(300, 188);
+            dataGridViewPrice_BMM.Size = new Size(339, 214);
             dataGridViewPrice_BMM.TabIndex = 0;
             // 
-            // Name
+            // textBoxShopInfo_BMM
             // 
-            Name.HeaderText = "Name";
-            Name.MinimumWidth = 6;
-            Name.Name = "Name";
-            Name.ReadOnly = true;
-            Name.Width = 245;
-            // 
-            // Price
-            // 
-            Price.HeaderText = "Price";
-            Price.MinimumWidth = 6;
-            Price.Name = "Price";
-            Price.ReadOnly = true;
-            Price.Width = 55;
-            // 
-            // groupBoxShopInfo_BMM
-            // 
-            groupBoxShopInfo_BMM.Controls.Add(textBoxShopInfo_BMM);
-            groupBoxShopInfo_BMM.Location = new Point(351, 359);
-            groupBoxShopInfo_BMM.Name = "groupBoxShopInfo_BMM";
-            groupBoxShopInfo_BMM.Size = new Size(544, 232);
-            groupBoxShopInfo_BMM.TabIndex = 4;
-            groupBoxShopInfo_BMM.TabStop = false;
-            groupBoxShopInfo_BMM.Text = "Сведения о производителе";
+            textBoxShopInfo_BMM.BackColor = Color.AliceBlue;
+            textBoxShopInfo_BMM.Location = new Point(31, 29);
+            textBoxShopInfo_BMM.Multiline = true;
+            textBoxShopInfo_BMM.Name = "textBoxShopInfo_BMM";
+            textBoxShopInfo_BMM.ReadOnly = true;
+            textBoxShopInfo_BMM.Size = new Size(420, 211);
+            textBoxShopInfo_BMM.TabIndex = 2;
             // 
             // groupBoxResult_BMM
             // 
+            groupBoxResult_BMM.BackColor = Color.Lavender;
             groupBoxResult_BMM.Controls.Add(textBoxRes_BMM);
-            groupBoxResult_BMM.Location = new Point(12, 294);
+            groupBoxResult_BMM.Dock = DockStyle.Top;
+            groupBoxResult_BMM.Location = new Point(0, 295);
             groupBoxResult_BMM.Name = "groupBoxResult_BMM";
-            groupBoxResult_BMM.Size = new Size(883, 59);
+            groupBoxResult_BMM.Size = new Size(907, 59);
             groupBoxResult_BMM.TabIndex = 5;
             groupBoxResult_BMM.TabStop = false;
             groupBoxResult_BMM.Text = "Результат поиска";
             // 
             // textBoxRes_BMM
             // 
+            textBoxRes_BMM.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             textBoxRes_BMM.Location = new Point(12, 24);
             textBoxRes_BMM.Name = "textBoxRes_BMM";
             textBoxRes_BMM.ReadOnly = true;
-            textBoxRes_BMM.Size = new Size(736, 27);
+            textBoxRes_BMM.Size = new Size(760, 27);
             textBoxRes_BMM.TabIndex = 0;
+            // 
+            // splitContainer1
+            // 
+            splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.Location = new Point(0, 354);
+            splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            splitContainer1.Panel1.Controls.Add(label1);
+            splitContainer1.Panel1.Controls.Add(dataGridViewPrice_BMM);
+            // 
+            // splitContainer1.Panel2
+            // 
+            splitContainer1.Panel2.Controls.Add(label2);
+            splitContainer1.Panel2.Controls.Add(textBoxShopInfo_BMM);
+            splitContainer1.Size = new Size(907, 249);
+            splitContainer1.SplitterDistance = 412;
+            splitContainer1.TabIndex = 6;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(27, 3);
+            label1.Name = "label1";
+            label1.Size = new Size(145, 20);
+            label1.TabIndex = 1;
+            label1.Text = "Сведения о цене($)";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(31, 3);
+            label2.Name = "label2";
+            label2.Size = new Size(257, 20);
+            label2.TabIndex = 3;
+            label2.Text = "Сведения о фирме-производителе ";
+            // 
+            // toolTipButtons_BMM
+            // 
+            toolTipButtons_BMM.IsBalloon = true;
+            toolTipButtons_BMM.ToolTipIcon = ToolTipIcon.Info;
+            toolTipButtons_BMM.ToolTipTitle = "Подсказка";
             // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LavenderBlush;
+            BackColor = Color.Lavender;
             ClientSize = new Size(907, 603);
+            Controls.Add(splitContainer1);
             Controls.Add(groupBoxResult_BMM);
-            Controls.Add(groupBoxShopInfo_BMM);
-            Controls.Add(groupBoxPrice_BMM);
             Controls.Add(groupBoxData_BMM);
             Controls.Add(menuStrip_BMM);
             MainMenuStrip = menuStrip_BMM;
+            MinimumSize = new Size(925, 650);
+            Name = "FormMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CompCatalog";
             menuStrip_BMM.ResumeLayout(false);
             menuStrip_BMM.PerformLayout();
             groupBoxData_BMM.ResumeLayout(false);
             groupBoxData_BMM.PerformLayout();
-            groupBoxPrice_BMM.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewPrice_BMM).EndInit();
             ((System.ComponentModel.ISupportInitialize)bindingSourcePrice_BMM).EndInit();
-            groupBoxShopInfo_BMM.ResumeLayout(false);
-            groupBoxShopInfo_BMM.PerformLayout();
             groupBoxResult_BMM.ResumeLayout(false);
             groupBoxResult_BMM.PerformLayout();
+            splitContainer1.Panel1.ResumeLayout(false);
+            splitContainer1.Panel1.PerformLayout();
+            splitContainer1.Panel2.ResumeLayout(false);
+            splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
+            splitContainer1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -455,14 +486,12 @@
         private Button buttonShowModels_BMM;
         private ComboBox comboBoxModel_BMM;
         private TextBox textBoxShopInfo_BMM;
-        private GroupBox groupBoxPrice_BMM;
         private ComboBox comboBoxName_BMM;
         private Button buttonDone_BMM;
         private Button buttonShowShopInfo_BMM;
         private BindingSource bindingSourcePrice_BMM;
         private DataGridView dataGridViewPrice_BMM;
         private Button buttonLoadData_BMM;
-        private GroupBox groupBoxShopInfo_BMM;
         private GroupBox groupBoxResult_BMM;
         private TextBox textBoxRes_BMM;
         private RadioButton radioButtonProcessorFrequency_BMM;
@@ -471,7 +500,9 @@
         private RadioButton radioButtonScreenSize_BMM;
         private RadioButton radioButtonProcessor_BMM;
         private RadioButton radioButtonDiagonal_BMM;
-        private DataGridViewTextBoxColumn Name;
-        private DataGridViewTextBoxColumn Price;
+        private SplitContainer splitContainer1;
+        private Label label1;
+        private Label label2;
+        private ToolTip toolTipButtons_BMM;
     }
 }
