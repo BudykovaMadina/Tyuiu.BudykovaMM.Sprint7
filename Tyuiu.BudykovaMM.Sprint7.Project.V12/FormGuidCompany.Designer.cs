@@ -36,24 +36,18 @@
             pictureBoxInfoCompTwice_BMM = new PictureBox();
             labelInfoTwice_BMM = new Label();
             panel3 = new Panel();
-            pictureBoxInfoCompMiddle_BMM = new PictureBox();
             label1 = new Label();
             panel4 = new Panel();
-            pictureBoxInfoCompany_BMM = new PictureBox();
             label2 = new Label();
             panel5 = new Panel();
-            pictureBoxInfoCompanyBottom_BMM = new PictureBox();
             labelInfoModelBotton_BMM = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxInfoComp_BMM).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxInfoCompTwice_BMM).BeginInit();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxInfoCompMiddle_BMM).BeginInit();
             panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxInfoCompany_BMM).BeginInit();
             panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxInfoCompanyBottom_BMM).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -68,9 +62,10 @@
             // 
             // pictureBoxInfoComp_BMM
             // 
+            pictureBoxInfoComp_BMM.Image = (Image)resources.GetObject("pictureBoxInfoComp_BMM.Image");
             pictureBoxInfoComp_BMM.Location = new Point(12, 55);
             pictureBoxInfoComp_BMM.Name = "pictureBoxInfoComp_BMM";
-            pictureBoxInfoComp_BMM.Size = new Size(125, 62);
+            pictureBoxInfoComp_BMM.Size = new Size(733, 62);
             pictureBoxInfoComp_BMM.TabIndex = 2;
             pictureBoxInfoComp_BMM.TabStop = false;
             // 
@@ -89,14 +84,15 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 125);
             panel2.Name = "panel2";
-            panel2.Size = new Size(907, 125);
+            panel2.Size = new Size(907, 287);
             panel2.TabIndex = 1;
             // 
             // pictureBoxInfoCompTwice_BMM
             // 
-            pictureBoxInfoCompTwice_BMM.Location = new Point(12, 42);
+            pictureBoxInfoCompTwice_BMM.Image = (Image)resources.GetObject("pictureBoxInfoCompTwice_BMM.Image");
+            pictureBoxInfoCompTwice_BMM.Location = new Point(-9, 32);
             pictureBoxInfoCompTwice_BMM.Name = "pictureBoxInfoCompTwice_BMM";
-            pictureBoxInfoCompTwice_BMM.Size = new Size(125, 62);
+            pictureBoxInfoCompTwice_BMM.Size = new Size(704, 245);
             pictureBoxInfoCompTwice_BMM.TabIndex = 3;
             pictureBoxInfoCompTwice_BMM.TabStop = false;
             // 
@@ -110,21 +106,12 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(pictureBoxInfoCompMiddle_BMM);
             panel3.Controls.Add(label1);
             panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(0, 250);
+            panel3.Location = new Point(0, 412);
             panel3.Name = "panel3";
-            panel3.Size = new Size(907, 125);
+            panel3.Size = new Size(907, 41);
             panel3.TabIndex = 2;
-            // 
-            // pictureBoxInfoCompMiddle_BMM
-            // 
-            pictureBoxInfoCompMiddle_BMM.Location = new Point(12, 40);
-            pictureBoxInfoCompMiddle_BMM.Name = "pictureBoxInfoCompMiddle_BMM";
-            pictureBoxInfoCompMiddle_BMM.Size = new Size(125, 62);
-            pictureBoxInfoCompMiddle_BMM.TabIndex = 1;
-            pictureBoxInfoCompMiddle_BMM.TabStop = false;
             // 
             // label1
             // 
@@ -136,51 +123,33 @@
             // 
             // panel4
             // 
-            panel4.Controls.Add(pictureBoxInfoCompany_BMM);
             panel4.Controls.Add(label2);
             panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(0, 375);
+            panel4.Location = new Point(0, 453);
             panel4.Name = "panel4";
-            panel4.Size = new Size(907, 103);
+            panel4.Size = new Size(907, 58);
             panel4.TabIndex = 3;
-            // 
-            // pictureBoxInfoCompany_BMM
-            // 
-            pictureBoxInfoCompany_BMM.Location = new Point(39, 51);
-            pictureBoxInfoCompany_BMM.Name = "pictureBoxInfoCompany_BMM";
-            pictureBoxInfoCompany_BMM.Size = new Size(125, 46);
-            pictureBoxInfoCompany_BMM.TabIndex = 1;
-            pictureBoxInfoCompany_BMM.TabStop = false;
             // 
             // label2
             // 
             label2.Location = new Point(12, 3);
             label2.Name = "label2";
-            label2.Size = new Size(895, 42);
+            label2.Size = new Size(895, 52);
             label2.TabIndex = 0;
             label2.Text = resources.GetString("label2.Text");
             // 
             // panel5
             // 
-            panel5.Controls.Add(pictureBoxInfoCompanyBottom_BMM);
             panel5.Controls.Add(labelInfoModelBotton_BMM);
             panel5.Dock = DockStyle.Bottom;
-            panel5.Location = new Point(0, 478);
+            panel5.Location = new Point(0, 511);
             panel5.Name = "panel5";
-            panel5.Size = new Size(907, 125);
+            panel5.Size = new Size(907, 92);
             panel5.TabIndex = 4;
-            // 
-            // pictureBoxInfoCompanyBottom_BMM
-            // 
-            pictureBoxInfoCompanyBottom_BMM.Location = new Point(353, 68);
-            pictureBoxInfoCompanyBottom_BMM.Name = "pictureBoxInfoCompanyBottom_BMM";
-            pictureBoxInfoCompanyBottom_BMM.Size = new Size(125, 45);
-            pictureBoxInfoCompanyBottom_BMM.TabIndex = 3;
-            pictureBoxInfoCompanyBottom_BMM.TabStop = false;
             // 
             // labelInfoModelBotton_BMM
             // 
-            labelInfoModelBotton_BMM.Location = new Point(12, 25);
+            labelInfoModelBotton_BMM.Location = new Point(9, 3);
             labelInfoModelBotton_BMM.Name = "labelInfoModelBotton_BMM";
             labelInfoModelBotton_BMM.Size = new Size(892, 62);
             labelInfoModelBotton_BMM.TabIndex = 2;
@@ -208,11 +177,8 @@
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBoxInfoCompTwice_BMM).EndInit();
             panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBoxInfoCompMiddle_BMM).EndInit();
             panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBoxInfoCompany_BMM).EndInit();
             panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBoxInfoCompanyBottom_BMM).EndInit();
             ResumeLayout(false);
         }
 
@@ -229,9 +195,6 @@
         private Label label2;
         private PictureBox pictureBoxInfoComp_BMM;
         private PictureBox pictureBoxInfoCompTwice_BMM;
-        private PictureBox pictureBoxInfoCompMiddle_BMM;
-        private PictureBox pictureBoxInfoCompany_BMM;
-        private PictureBox pictureBoxInfoCompanyBottom_BMM;
         private Label labelInfoModelBotton_BMM;
     }
 }

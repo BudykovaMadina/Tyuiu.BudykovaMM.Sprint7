@@ -153,15 +153,16 @@
             // руководствоToolStripMenuItem1
             // 
             руководствоToolStripMenuItem1.Name = "руководствоToolStripMenuItem1";
-            руководствоToolStripMenuItem1.Size = new Size(178, 26);
+            руководствоToolStripMenuItem1.Size = new Size(224, 26);
             руководствоToolStripMenuItem1.Text = "Руководство";
             руководствоToolStripMenuItem1.Click += руководствоToolStripMenuItem1_Click;
             // 
             // добавитьToolStripMenuItem1
             // 
             добавитьToolStripMenuItem1.Name = "добавитьToolStripMenuItem1";
-            добавитьToolStripMenuItem1.Size = new Size(178, 26);
+            добавитьToolStripMenuItem1.Size = new Size(224, 26);
             добавитьToolStripMenuItem1.Text = "Добавить";
+            добавитьToolStripMenuItem1.Click += добавитьToolStripMenuItem1_Click;
             // 
             // groupBoxData_BMM
             // 

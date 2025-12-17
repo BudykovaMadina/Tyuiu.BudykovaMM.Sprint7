@@ -68,7 +68,7 @@ namespace Tyuiu.BudykovaMM.Sprint7.Project.V12
             guideForm.Show();
         }
 
-        
+
 
         private void buttonShowModels_BMM_Click(object sender, EventArgs e)
         {
@@ -204,5 +204,14 @@ namespace Tyuiu.BudykovaMM.Sprint7.Project.V12
             LoadData();
         }
 
+        private void добавитьToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "CSV files (*.csv)|*.csv";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // 
+            }
+        }
     }
 }

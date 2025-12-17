@@ -127,6 +127,8 @@
             Controls.Add(panel_BMM);
             Controls.Add(panelMiddle_BMM);
             Controls.Add(panelWelcomeButtons_BMM);
+            MaximizeBox = false;
+            MaximumSize = new Size(703, 379);
             MinimumSize = new Size(703, 379);
             Name = "FormWelcome";
             StartPosition = FormStartPosition.CenterScreen;
