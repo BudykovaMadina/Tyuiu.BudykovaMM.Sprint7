@@ -44,7 +44,7 @@
             // 
             labelWelcome_BMM.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelWelcome_BMM.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            labelWelcome_BMM.Location = new Point(133, 50);
+            labelWelcome_BMM.Location = new Point(127, 75);
             labelWelcome_BMM.Name = "labelWelcome_BMM";
             labelWelcome_BMM.Padding = new Padding(20, 0, 20, 0);
             labelWelcome_BMM.Size = new Size(400, 50);

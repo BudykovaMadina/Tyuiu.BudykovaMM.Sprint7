@@ -83,18 +83,18 @@ namespace Tyuiu.BudykovaMM.Sprint7.Project.V12
                 int rows = lines.Length;
                 int columns = lines[0].Split(';').Length;
 
-                // Очистка комбобокса перед заполнением
+                
                 comboBoxModel_BMM.Items.Clear();
 
                 for (int i = 1; i < rows; i++)
                 {
-                    // Получаем модель из файла и добавляем в комбобокс
+                    
                     string model = ds.CollectTextFromFileInt(path, i, 0);
                     comboBoxModel_BMM.Items.Add(model);
                 }
 
                 buttonDone_BMM.Enabled = true;
-                comboBoxModel_BMM.Enabled = true; // включаем комбобокс
+                comboBoxModel_BMM.Enabled = true; 
             }
             catch
             {
@@ -103,8 +103,8 @@ namespace Tyuiu.BudykovaMM.Sprint7.Project.V12
         }
         private void LoadData()
         {
-            string name = Convert.ToString(comboBoxName_BMM.Text); // получаем имя из comboBox
-            string path = $@"C:\DataSprint7\{name}Price.csv"; // Формируем путь к файлу
+            string name = Convert.ToString(comboBoxName_BMM.Text); 
+            string path = $@"C:\DataSprint7\{name}Price.csv"; 
 
             try
             {
@@ -114,7 +114,7 @@ namespace Tyuiu.BudykovaMM.Sprint7.Project.V12
                     return;
                 }
 
-                // Чтение данных из файла
+                
                 var models = new List<ComputerModel>();
                 string[] lines = File.ReadAllLines(path);
 
