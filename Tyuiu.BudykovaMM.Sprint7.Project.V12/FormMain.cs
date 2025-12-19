@@ -62,11 +62,7 @@ namespace Tyuiu.BudykovaMM.Sprint7.Project.V12
             }
         }
 
-        private void руководствоToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            FormGuidCompany guideForm = new FormGuidCompany();
-            guideForm.Show();
-        }
+        
 
 
 

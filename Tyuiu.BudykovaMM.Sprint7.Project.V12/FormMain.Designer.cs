@@ -39,9 +39,6 @@
             добавитьСвоюМодельToolStripMenuItem = new ToolStripMenuItem();
             руководствоToolStripMenuItem = new ToolStripMenuItem();
             добавитьToolStripMenuItem = new ToolStripMenuItem();
-            добавитьСвоюФирмуToolStripMenuItem = new ToolStripMenuItem();
-            руководствоToolStripMenuItem1 = new ToolStripMenuItem();
-            добавитьToolStripMenuItem1 = new ToolStripMenuItem();
             groupBoxData_BMM = new GroupBox();
             radioButtonProcessorFrequency_BMM = new RadioButton();
             radioButtonRAM_BMM = new RadioButton();
@@ -110,7 +107,7 @@
             // 
             // базаДанныхToolStripMenuItem
             // 
-            базаДанныхToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { перейтиКПапкеToolStripMenuItem, добавитьСвоюМодельToolStripMenuItem, добавитьСвоюФирмуToolStripMenuItem });
+            базаДанныхToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { перейтиКПапкеToolStripMenuItem, добавитьСвоюМодельToolStripMenuItem });
             базаДанныхToolStripMenuItem.Name = "базаДанныхToolStripMenuItem";
             базаДанныхToolStripMenuItem.Size = new Size(111, 24);
             базаДанныхToolStripMenuItem.Text = "База данных";
@@ -142,27 +139,6 @@
             добавитьToolStripMenuItem.Size = new Size(178, 26);
             добавитьToolStripMenuItem.Text = "Добавить";
             добавитьToolStripMenuItem.Click += добавитьToolStripMenuItem_Click;
-            // 
-            // добавитьСвоюФирмуToolStripMenuItem
-            // 
-            добавитьСвоюФирмуToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { руководствоToolStripMenuItem1, добавитьToolStripMenuItem1 });
-            добавитьСвоюФирмуToolStripMenuItem.Name = "добавитьСвоюФирмуToolStripMenuItem";
-            добавитьСвоюФирмуToolStripMenuItem.Size = new Size(255, 26);
-            добавитьСвоюФирмуToolStripMenuItem.Text = "Добавить свою фирму";
-            // 
-            // руководствоToolStripMenuItem1
-            // 
-            руководствоToolStripMenuItem1.Name = "руководствоToolStripMenuItem1";
-            руководствоToolStripMenuItem1.Size = new Size(224, 26);
-            руководствоToolStripMenuItem1.Text = "Руководство";
-            руководствоToolStripMenuItem1.Click += руководствоToolStripMenuItem1_Click;
-            // 
-            // добавитьToolStripMenuItem1
-            // 
-            добавитьToolStripMenuItem1.Name = "добавитьToolStripMenuItem1";
-            добавитьToolStripMenuItem1.Size = new Size(224, 26);
-            добавитьToolStripMenuItem1.Text = "Добавить";
-            добавитьToolStripMenuItem1.Click += добавитьToolStripMenuItem1_Click;
             // 
             // groupBoxData_BMM
             // 
@@ -478,9 +454,6 @@
         private ToolStripMenuItem добавитьСвоюМодельToolStripMenuItem;
         private ToolStripMenuItem руководствоToolStripMenuItem;
         private ToolStripMenuItem добавитьToolStripMenuItem;
-        private ToolStripMenuItem добавитьСвоюФирмуToolStripMenuItem;
-        private ToolStripMenuItem руководствоToolStripMenuItem1;
-        private ToolStripMenuItem добавитьToolStripMenuItem1;
         private GroupBox groupBoxData_BMM;
         private Label labelfirma_BMM;
         private Label labelModel_BMM;
